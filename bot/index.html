@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical AI Lab Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chatbot-container">
+        <div class="chat-header">
+            <img src="WhatsApp Image 2024-10-02 at 16.39.45_76548848.jpg" alt="Bot Icon" class="bot-icon">
+            <h1>AI Medical Assistant</h1>
+            <p class="status">Online</p>
+        </div>
+        
+        <div class="chat-body">
+            <div class="welcome-message">
+                <p>Hello! I'm your AI Medical Assistant. Please fill out the lab test form and I'll analyze the results for you.</p>
+            </div>
+            
+            <form id="lab-test-form" class="form-container">
+                <div class="form-group">
+                    <label for="test-type">Choose the test result type</label>
+                    <select id="test-type" required>
+                        <option value="" disabled selected>Select test type</option>
+                        <option value="blood">Blood Test</option>
+                        <option value="urine">Urine Test</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="test-date">Select test date</label>
+                    <input type="date" id="test-date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="test-result">Attach Test Result</label>
+                    <input type="file" id="test-result" accept="application/pdf,image/png,image/jpeg" required>
+                    <small>PDF, PNG, or JPEG, max 15MB, max 3 pages</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="additional-info">Additional Information (optional)</label>
+                    <textarea id="additional-info" rows="4" placeholder="Additional test information you think we should know about..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit & Start Analysis</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 AI Medical Assistant - Your Trusted Health Bot</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
